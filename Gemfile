@@ -40,7 +40,7 @@ gem 'devise'
 gem 'hpricot'
 gem 'ruby_parser'
 gem 'omniauth'
-gem 'omniauth-google'
+gem "omniauth-google-oauth2", "~> 0.2.1"
 
 # Reduces boot times through caching; required in config/boot.rb
 gem 'bootsnap', '>= 1.1.0', require: false
