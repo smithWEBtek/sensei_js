@@ -14,7 +14,6 @@
     get 'signout', to: 'sessions#destroy', as: 'signout'
     get 'sessions/create'
     get 'sessions/destroy'
-    get 'home/show'
     devise_for :users
     resources :sessions, only: [:create, :destroy]
     resource :home, only: [:show]
