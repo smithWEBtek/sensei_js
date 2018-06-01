@@ -5,6 +5,8 @@
   <img src="<%= @user.image %>">
 <% else %>
   <%= link_to('Log in with Facebook!', '/auth/facebook') %>
+  <%= link_to('See your users', '/views/users/show.html.erb') %>
+
 <% end %>
 
 <div class="w3-display-middle">
