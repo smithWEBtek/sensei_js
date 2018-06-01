@@ -20,6 +20,13 @@
 # Ignore uploaded files in development
 /storage/*
 
+
+# dotenv
+# TODO Comment out this rule if environment variables can be committed
+.env
+
+
+
 /node_modules
 /yarn-error.log
 
