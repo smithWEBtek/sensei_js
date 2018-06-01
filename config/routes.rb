@@ -9,12 +9,13 @@
 
 
   Sensei::Application.routes.draw do
+    devise_for :users, :controllers => { :omniauth_callbacks => "users/omniauth_callbacks" }
+
     get 'auth/:provider/callback', to: 'sessions#create'
     get 'auth/failure', to: redirect('/')
     get 'signout', to: 'sessions#destroy', as: 'signout'
     get 'sessions/create'
     get 'sessions/destroy'
-    devise_for :users
     resources :sessions, only: [:create, :destroy]
     resource :home, only: [:show]
     root to: "application#index"
