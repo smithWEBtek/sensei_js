@@ -1,16 +1,11 @@
-<% if session[:user_id] %>
-  <h1><%= @user.name %></h1>
-  <h2>Email: <%= @user.email %></h2>
-  <h2>Facebook UID: <%= @user.uid %></h2>
-  <img src="<%= @user.image %>">
+<% if @user %>
+  <%= "MEOWMEOWMEOWMEOW" %>
 <% else %>
-  <%= link_to('Log in with Facebook!', '/auth/facebook') %>
-  <%= link_to('See your users', '/views/users/show.html.erb') %>
-
+  <%= "WOOFWOOFWOOFWOOF" %>
 <% end %>
 
-<div class="w3-display-middle">
-  <h1 class="w3-jumbo w3-center">SENSEI</h1>
-  <hr class="w3-border-grey" style="margin:auto;width:40%">
-  <p class="w3-large w3-center">Never forget what you've learned.</p>
-</div>
+  <div class="w3-display-middle">
+    <h1 class="w3-jumbo w3-center">SENSEI</h1>
+    <hr class="w3-border-grey" style="margin:auto;width:40%">
+    <p class="w3-large w3-center">Never forget what you've learned.</p>
+  </div>
