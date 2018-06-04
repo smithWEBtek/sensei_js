@@ -18,7 +18,8 @@
     get 'sessions/create'
     get 'sessions/destroy'
     resources :sessions, only: [:create, :destroy]
-    resource :teachers, only: [:show]
-    root to: "application#index"
 
+    root to: "application#index"
+    resource :teachers, only: [:show]
+    resource :teachings, only: [:show]
   end
