@@ -1,0 +1,15 @@
+class CreateTeachings < ActiveRecord::Migration[5.2]
+  def change
+    create_table :teachings do |t|
+      t.string :name
+      t.text :content
+      t.date :date
+      t.integer :score
+      t.string :media_type
+      t.string :source
+      t.boolean :favorite
+      t.boolean :public
+      t.integer :teacher_id
+    end
+  end
+end
