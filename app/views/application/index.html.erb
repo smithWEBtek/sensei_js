@@ -1,10 +1,11 @@
 <% if current_user %>
-  <%= "MEOWMEOWMEOWMEOW" %>
-  <%= current_user.name %>
-  <%binding.pry%>
+  <%= "My Profile" %> |
+  <%= "Teachers" %> |
+  <%= "Teachings" %>
+
 
 <% else %>
-  <%= "WOOFWOOFWOOFWOOF" %>
+  <%= "You are not logged in. Make sure to log in." %>
 <% end %>
 
   <div class="w3-display-middle">
