@@ -1,8 +1,12 @@
 class User < ApplicationRecord
+  has_many :teachers
+  has_many :teachings, through: :teachers
+
   # Include default devise modules. Others available are:
   # :confirmable, :lockable, :timeoutable and :omniauthable
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :trackable, :validatable, :omniauthable, omniauth_providers: [:google_oauth2]
+
 
 
  # def self.from_omniauth(auth)
