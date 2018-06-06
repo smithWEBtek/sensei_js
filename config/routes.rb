@@ -18,9 +18,12 @@
     get 'sessions/create'
     get 'sessions/destroy'
     resources :sessions, only: [:create, :destroy]
-    get 'teachers/new', to: 'teachers#new'
+
 
     root to: "application#index"
-    resource :teachers, only: [:show]
-    resource :teachings, only: [:show]
+    get 'teachers/new', to: 'teachers#new'
+    get '/teachers/:id', to: 'teachers#show'
+    resources :teachers, :teachings, :users
+    get 'teachers/show', to: 'teachers#show'
+    get 'teachings/show', to: 'teachings#show'
   end

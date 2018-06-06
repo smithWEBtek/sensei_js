@@ -33,7 +33,7 @@
     <% if current_user %>
       <%= link_to('My Profile',{:controller => 'application',:action => 'index'})%> |
       <%= link_to('Teachers',{:controller => 'teachers',:action => 'show'})%> |
-      <%= link_to('Teachings',{:controller => 'teachings',:action => 'show'})%> |
+      <%= link_to('Teachings',{:controller => 'teachings',:action => 'show'})%>
     <% else %>
       <%= "You are not logged in. Make sure to log in." %>
     <% end %>
