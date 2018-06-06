@@ -10,7 +10,10 @@
     body,h1 {font-family: "Raleway", sans-serif}
     body, html {height: 100%}
     .bgimg {
-        background-image: url('https://images.unsplash.com/photo-1524260521508-65da4ffd384a?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=8cfead92c767c92a40bd5c0a208d4bdd&auto=format&fit=crop&w=2552&q=80');
+        /*background-image: url('https://images.unsplash.com/photo-1524260521508-65da4ffd384a?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=8cfead92c767c92a40bd5c0a208d4bdd&auto=format&fit=crop&w=2552&q=80');*/
+        /*background-image: url('https://images.unsplash.com/photo-1524260521508-65da4ffd384a?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=8cfead92c767c92a40bd5c0a208d4bdd&auto=format&fit=crop&w=2552&q=80');*/
+        background-image: url('https://images.unsplash.com/photo-1526721940322-10fb6e3ae94a?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=fb5f417520f2272d952fce5c56cfd927&auto=format&fit=crop&w=1951&q=80');
+
         min-height: 100%;
         background-position: center;
         background-size: cover;
@@ -32,8 +35,8 @@
       <div class="w3-display-topleft w3-padding-large w3-medium">
     <% if current_user %>
       <%= link_to('My Profile',{:controller => 'application',:action => 'index'})%> |
-      <%= link_to('Teachers',{:controller => 'teachers',:action => 'show'})%> |
-      <%= link_to('Teachings',{:controller => 'teachings',:action => 'show'})%>
+      <%= link_to('Teachers',{:controller => 'teachers',:action => 'index'})%> |
+      <%= link_to('Teachings',{:controller => 'teachings',:action => 'index'})%>
     <% else %>
       <%= "You are not logged in. Make sure to log in." %>
     <% end %>
@@ -50,8 +53,8 @@
         <% end %>
 
           <% if current_user %>
-            Logged in as <strong><%= current_user.email %></strong>.
-            <%= link_to 'Edit profile', edit_user_registration_path, :class => 'navbar-link' %> |
+            <!-- Logged in as <strong><%= current_user.email %></strong>.
+            <%= link_to 'Edit profile', edit_user_registration_path, :class => 'navbar-link' %> | -->
             <%= link_to "Logout", destroy_user_session_path, method: :delete, :class => 'navbar-link'  %>
           <% else %>
             <%= link_to "Sign up", new_user_registration_path, :class => 'navbar-link'  %> |
