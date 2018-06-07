@@ -10,7 +10,7 @@
     <!-- <p><%= f.label :name, 'Title' %> -->
     <%= f.text_field :name, placeholder: "Title"  %>&nbsp;&nbsp;
     <!-- <%= f.label :date, 'Date' %> -->
-    <%= f.text_field :date, placeholder: "Date"  %> </p>
+    <!-- <%= f.text_field :date, placeholder: "Date"  %> </p> -->
 
     <p><%= f.text_area :content, size: "70x10", placeholder: "Content" %></p>
 
@@ -18,9 +18,19 @@
     <%= f.text_field :media_type, placeholder: "Media Type"  %>&nbsp;&nbsp;
     <!-- <%= f.label :source, 'Source' %> -->
     <%= f.text_field :source, placeholder: "Source"  %></p>
+<!--
+    <p><b>Select A Teacher:</b>
+      <%current_user.teachers.each do |teacher|%>
+        <p><input type="radio" name="teaching[teacher_id]" value="<%=teacher.id%>" id="<%=teacher.id%>">&nbsp;&nbsp;<%=teacher.name.capitalize %></p></input>
+      <%end%><p/> -->
 
-    </br>
-    </br>
+      <p><b>Select A Teacher:&nbsp;&nbsp;</b>
+      <%= f.select(:teacher_id) do %>
+        <% current_user.teachers.each do |teacher| -%>
+          <%= content_tag(:option, teacher.name, value: teacher.id) %>
+        <% end %>
+      <% end %>
+
     </br>
 
     <p><%=f.select :favorite, [['Favorite', true], ['Not Favorite', false]]%> &nbsp;&nbsp; &nbsp;&nbsp;
@@ -28,3 +38,6 @@
 
   <% end %>
 </div>
+
+</br>
+</br>

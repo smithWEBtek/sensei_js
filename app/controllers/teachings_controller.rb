@@ -6,6 +6,7 @@ class TeachingsController < ApplicationController
   end
 
   def show
+    @teaching = current_user.teachings.find(params[:id])
   end
 
   def new
@@ -16,6 +17,14 @@ class TeachingsController < ApplicationController
   end
 
   def create
+    @teaching = Teaching.new(teaching_params)
+    # @teaching.user = current_user
+   if @teaching.save
+     @teaching.save
+     redirect_to teaching_path(@teaching), notice: 'Teaching was saved.'
+   else
+     redirect_to new_teaching_path, alert: 'Your teaching did not save. Please try again.'
+   end
   end
 
   def update
@@ -27,5 +36,6 @@ class TeachingsController < ApplicationController
   private
 
   def teaching_params
+    params.require(:teaching).permit(:name, :content, :media_type, :source, :favorite, :teacher_id)
   end
 end
