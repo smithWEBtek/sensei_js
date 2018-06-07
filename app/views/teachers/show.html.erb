@@ -10,4 +10,5 @@
     <p>// <a href="/teachings/<%=teaching.id%>"><%=teaching.name.capitalize%></a></p>
   <%end%>
 
-  <p>// <a href="/teachings/new"><%="Record a Teaching that you want to remember."%></a></p>
+  <p>//<%= link_to('Create a new teacher.',{:controller => 'teachers',:action => 'new'})%><p>
+  <p>//<%= link_to('Create a new teaching.',{:controller => 'teachings',:action => 'new'})%><p>
