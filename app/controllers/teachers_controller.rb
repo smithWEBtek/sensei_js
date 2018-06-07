@@ -33,6 +33,11 @@ class TeachersController < ApplicationController
   def destroy
   end
 
+  def most_common
+    self.most_common
+  end
+
+
   private
 
   def teacher_params

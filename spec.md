@@ -24,7 +24,7 @@ Specs:
       - User => validates password length
       - User => Validates presence of email, password and name
 
-- [] Include a class level ActiveRecord scope method (model object & class method name and URL to see the working feature e.g. User.most_recipes URL: /users/most_recipes)
+- [] Include a class level ActiveRecord scope method (model object & class method name and URL to see the working feature e.g. User.most_recipes URL: /users/most_sensei)
 
 - [x] Include signup - Devise
 - [x] Include login - Devise

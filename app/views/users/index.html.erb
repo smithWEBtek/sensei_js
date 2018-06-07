@@ -8,3 +8,8 @@
   <%@daily = current_user.teachings.sample%>
   <%=@daily.teacher.name%> // <%=@daily.name%>
   <p><%=@daily.content%></p>
+</div>
+
+<div class="w3-display-bottomleft">
+  <p>&nbsp;&nbsp;&nbsp;&nbsp;<%= link_to('Most Common Sensei',{:controller => 'teachers', :action => 'most_common'})%></p>
+</div>

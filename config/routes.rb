@@ -3,4 +3,5 @@
     resources :sessions, only: [:create, :destroy]
     root to: "application#index"
     resources :teachers, :teachings, :users
+    get '/most_common', :controller => 'teachers', :action => 'most_common'
   end
