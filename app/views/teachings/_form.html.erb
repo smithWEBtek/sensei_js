@@ -1,0 +1,30 @@
+<div class="w3-center">
+<h1 class="w3-jumbo w3-center">Record a Teaching</h1>
+
+
+    </br>
+    </br>
+    </br>
+
+  <%= form_for @teaching do |f| %>
+    <!-- <p><%= f.label :name, 'Title' %> -->
+    <%= f.text_field :name, placeholder: "Title"  %>&nbsp;&nbsp;
+    <!-- <%= f.label :date, 'Date' %> -->
+    <%= f.text_field :date, placeholder: "Date"  %> </p>
+
+    <p><%= f.text_area :content, size: "70x10", placeholder: "Content" %></p>
+
+    <!-- <p><%= f.label :media_type, 'Media Type' %> -->
+    <%= f.text_field :media_type, placeholder: "Media Type"  %>&nbsp;&nbsp;
+    <!-- <%= f.label :source, 'Source' %> -->
+    <%= f.text_field :source, placeholder: "Source"  %></p>
+
+    </br>
+    </br>
+    </br>
+
+    <p><%=f.select :favorite, [['Favorite', true], ['Not Favorite', false]]%> &nbsp;&nbsp; &nbsp;&nbsp;
+    <%= f.submit %></p>
+
+  <% end %>
+</div>
