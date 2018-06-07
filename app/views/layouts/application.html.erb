@@ -10,10 +10,7 @@
     body,h1 {font-family: "Raleway", sans-serif}
     body, html {height: 100%}
     .bgimg {
-        /*background-image: url('https://images.unsplash.com/photo-1419640303358-44f0d27f48e7?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=aed08265a8704f0984dcaaa5b37d7d80&auto=format&fit=crop&w=1876&q=80');*/
         background-image: url('https://images.unsplash.com/photo-1472566316349-bce77aa2a778?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=7d008375f2174fbe7fd36f5ad74a576b&auto=format&fit=crop&w=1950&q=80');
-        /*background-image: url('https://images.unsplash.com/photo-1527130499353-3d8740d48c58?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=765c7eec88bcf40f882d77fc4e720ab1&auto=format&fit=crop&w=1950&q=80');*/
-
         min-height: 100%;
         background-position: center;
         background-size: cover;
@@ -31,7 +28,7 @@
 
   <body>
     <!-- top left -->
-    <div class="bgimg w3-display-container w3-animate-opacity w3-text-white">
+    <div class="bgimg w3-display-container w3-animate-opacity  w3-text-white">
       <div class="w3-display-topleft w3-padding-large w3-medium">
     <% if current_user %>
       <%= link_to('My Profile',{:controller => 'application',:action => 'index'})%> |
