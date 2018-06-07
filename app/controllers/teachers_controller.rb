@@ -34,7 +34,7 @@ class TeachersController < ApplicationController
   end
 
   def most_common
-    self.most_common
+    @most_common = current_user.teachers.sort_by {|teacher| teacher.teachings.count}.last.name
   end
 
 
