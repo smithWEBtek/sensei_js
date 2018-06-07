@@ -2,9 +2,9 @@
   <h1 class="w3-xl"><b>teachings</b></h1>
   <hr class="w3-border-grey" style="margin:auto;width:40%">
 
-    <!-- <% current_user.teachers.each do |teacher| %>
-      <p>// <a href="/teachers/<%=teacher.id%>"><%=teacher.name.capitalize%></a></p>
-    <% end %> -->
 
+  <% @teachings.each do |teaching| %>
+    <p><a href="/teachings/<%=teaching.id%>"><%=teaching.name.capitalize%></a></p>
+  <%end%>
 
-    <%= link_to('Create a new teaching.',{:controller => 'teachings',:action => 'new'})%>
+  <p><%= link_to('Create a new teaching.',{:controller => 'teachings',:action => 'new'})%></p>

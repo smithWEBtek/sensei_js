@@ -3,6 +3,7 @@ class TeachingsController < ApplicationController
 
 
   def index
+    @teachings = current_user.teachings.all
   end
 
   def show
