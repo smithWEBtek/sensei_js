@@ -8,6 +8,7 @@ class TeachingsController < ApplicationController
 
   def show
     @teaching = current_user.teachings.find(params[:id])
+    @teachings = current_user.teachings.all
   end
 
   def new

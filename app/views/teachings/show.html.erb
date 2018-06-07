@@ -1,10 +1,14 @@
-<div class="w3-display-topmiddle">
-  <h1 class="w3-xl"><b>teachings</b></h1>
+<div class="w3-display-left">
+  <h1 class="w3-xl"><b>&nbsp;&nbsp;&nbsp;&nbsp;teaching //</b></h1>
   <hr class="w3-border-grey" style="margin:auto;width:40%">
+</div>
 
-    <p>Teaching: <%=@teaching.name %></p>
-    <p>Content: <%=@teaching.content%></p>
-    <p>Media Type: <%=@teaching.media_type%></p>
-    <p>Source: <%=@teaching.source%></p>
-    <p>Teacher: <%=@teaching.teacher.name.capitalize%>
-    <p>// <a href="/teachings/new"><%="Record a Teaching that you want to remember."%></a></p>
+  <div class="w3-display-middle">
+    <p><b>Teaching:</b> <%=@teaching.name %></p>
+    <p><b>Content:</b> <%=@teaching.content%></p>
+    <p><b>Media Type:</b> <%=@teaching.media_type%></p>
+    <p><b>Source:</b> <%=@teaching.source%></p>
+    <p><b>Teacher:</b> <%=@teaching.teacher.name.capitalize%></p>
+    <p>// <a href="/teachings/new"><%="Create a Teaching."%></a></p>
+
+  </div>

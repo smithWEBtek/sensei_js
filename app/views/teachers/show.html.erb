@@ -1,11 +1,13 @@
-
-<div class="w3-display-topmiddle">
-  <h1 class="w3-xl"><b>teachers</b></h1>
+<div class="w3-display-left">
+  <h1 class="w3-xl"><b>&nbsp;&nbsp;&nbsp;&nbsp;teacher //</b></h1>
   <hr class="w3-border-grey" style="margin:auto;width:40%">
+</div>
 
-  <p>Teacher: <%=@teacher.name %></p>
+<div class="w3-display-middle">
+  <p><b>Teacher: </b><%=@teacher.name.capitalize %></p>
   <p>Teachings of this teacher:<p>
-  <p>1</p>
-  <p>2</p>
-  <p>3</p>
+  <% @teacher.teachings.each do |teaching|%>
+    <p>// <a href="/teachings/<%=teaching.id%>"><%=teaching.name.capitalize%></a></p>
+  <%end%>
+
   <p>// <a href="/teachings/new"><%="Record a Teaching that you want to remember."%></a></p>
