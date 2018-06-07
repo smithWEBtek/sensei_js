@@ -6,7 +6,7 @@ class TeachersController < ApplicationController
   end
 
   def show
-    # @teacher = current_user.teachers.find(params[:id])
+    @teacher = current_user.teachers.find(params[:id])
   end
 
   def new
@@ -17,6 +17,14 @@ class TeachersController < ApplicationController
   end
 
   def create
+    @teacher = Teacher.new(teacher_params)
+    @teacher.user = current_user
+   if @teacher.save
+     @teacher.save
+     redirect_to teacher_path(@teacher), notice: 'Teacher was saved.'
+   else
+     redirect_to new_teacher_path, alert: 'Your teacher did not save. Please try again.'
+   end
   end
 
   def update
@@ -28,5 +36,6 @@ class TeachersController < ApplicationController
   private
 
   def teacher_params
+    params.require(:teacher).permit(:name)
   end
 end
