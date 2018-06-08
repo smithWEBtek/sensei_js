@@ -5,9 +5,11 @@
 
 <div class="w3-display-middle">
   <p><b>Teacher: </b><%=@teacher.name.capitalize %></p>
+<%if !@teacher.teachings.empty? %>
   <p>Teachings of this teacher:<p>
   <% @teacher.teachings.each do |teaching|%>
     <p>// <a href="/teachings/<%=teaching.id%>"><%=teaching.name.capitalize%></a></p>
+    <%end%>
   <%end%>
 
   <p>//<%= link_to('Create a new teacher.',{:controller => 'teachers',:action => 'new'})%><p>
