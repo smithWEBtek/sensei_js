@@ -37,7 +37,7 @@ Specs:
         - /teachers/new
         - /teachings/new
 
-- [ ] Include form display of validation errors (form URL e.g. /recipes/new)
+- [x] Include form display of validation errors (form URL e.g. /recipes/new)
 
 Confirm:
 - [x] The application is pretty DRY
