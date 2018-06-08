@@ -35,7 +35,6 @@ class TeachingsController < ApplicationController
     @teaching.update(name: params[:name], content: params[:content], media_type: params[:media_type], source: params[:source])
     redirect_to teaching_path(@teaching)
    end
-  end
 
   def destroy
     @teaching = current_user.teachings.find(params[:id])
@@ -48,3 +47,4 @@ class TeachingsController < ApplicationController
   def teaching_params
     params.require(:teaching).permit(:name, :content, :media_type, :source, :favorite, :teacher_id)
   end
+end

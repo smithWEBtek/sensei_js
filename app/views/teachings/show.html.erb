@@ -11,5 +11,5 @@
     <p><b>Teacher:</b> <%=@teaching.teacher.name.capitalize%></p>
     <p>// <a href="/teachings/new"><%="Create a Teaching."%></a></p>
     <p>//<%= link_to('Edit this teaching.',{:controller => 'teachings',:action => 'edit'})%><p>
-    <p>//<%= link_to 'Delete this teaching.', teaching_path(@teaching), method: :delete, data: { confirm: 'Are you sure?' } %></p>
+    <p>//<%= link_to('Delete this teaching.', teaching_path(@teaching), method: :delete, data: { confirm: 'Are you sure?' }) %></p>
   </div>
