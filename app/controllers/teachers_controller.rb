@@ -24,7 +24,7 @@ class TeachersController < ApplicationController
      @teacher.save
      redirect_to teacher_path(@teacher), notice: 'Teacher was saved.'
    else
-     redirect_to new_teacher_path, alert: 'Your teacher did not save. Please try again.'
+     redirect_to new_teacher_path, notice: 'Teacher was not saved.', alert: @teacher.errors.full_messages
    end
   end
 

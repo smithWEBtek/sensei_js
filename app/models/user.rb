@@ -3,6 +3,8 @@ class User < ApplicationRecord
   has_many :teachings, through: :teachers
   validates :email, presence: true
   validates :password, length: { in: 6..20 }
+  validates :email, uniqueness: true
+
 
   # Include default devise modules. Others available are:
   # :confirmable, :lockable, :timeoutable and :omniauthable
