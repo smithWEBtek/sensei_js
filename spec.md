@@ -31,11 +31,11 @@ Specs:
 - [x] Include logout - Devise
 - [x] Include third party signup/login - Devise/OmniAuth with Google
 - [x] Include nested resource show or index -
-        - /Teachers/1/teachings
+        - /teachers/1/teachings
 
 - [x] Include nested resource "new" form (URL e.g. recipes/1/ingredients)
-        - /Teachers/new
-        - /Teachings/new
+        - /teachers/new
+        - /teachings/new
 
 - [ ] Include form display of validation errors (form URL e.g. /recipes/new)
 

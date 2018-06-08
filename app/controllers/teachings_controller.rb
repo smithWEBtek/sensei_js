@@ -16,6 +16,7 @@ class TeachingsController < ApplicationController
   end
 
   def edit
+    @teaching = Teaching.find(params[:id])
   end
 
   def create
@@ -30,9 +31,16 @@ class TeachingsController < ApplicationController
   end
 
   def update
+    @teaching = Teaching.find(params[:id])
+    @teaching.update(name: params[:name], content: params[:content], media_type: params[:media_type], source: params[:source])
+    redirect_to teaching_path(@teaching)
+   end
   end
 
   def destroy
+    @teaching = current_user.teachings.find(params[:id])
+    @teaching.destroy
+    redirect_to root_path, notice: 'This teaching has been deleted.'
   end
 
   private
@@ -40,4 +48,3 @@ class TeachingsController < ApplicationController
   def teaching_params
     params.require(:teaching).permit(:name, :content, :media_type, :source, :favorite, :teacher_id)
   end
-end

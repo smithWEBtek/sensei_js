@@ -14,6 +14,7 @@ class TeachersController < ApplicationController
   end
 
   def edit
+    @teacher = Teacher.find(params[:id])
   end
 
   def create
@@ -28,9 +29,19 @@ class TeachersController < ApplicationController
   end
 
   def update
+    @teacher = Teacher.find(params[:id])
+    @teacher.update(name: params[:name])
+    redirect_to teacher_path(@teacher)
   end
 
   def destroy
+      @teacher = current_user.teachers.find(params[:id])
+    if @teacher.teachings.empty?
+      @teacher.destroy
+      redirect_to root_path, notice: 'This teacher has been deleted.'
+    else
+      redirect_to root_path, alert: "This teacher has teachings. Delete all teachings first."
+    end
   end
 
   def most_common

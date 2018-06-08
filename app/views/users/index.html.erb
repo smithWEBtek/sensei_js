@@ -5,7 +5,7 @@
 
   <%if !current_user.teachers.empty?%>
     <div class="w3-display-middle">
-      <%@daily = current_user.teachings.sample%>
+      <!-- <%@daily = current_user.teachings.sample%> -->
       <%=@daily.teacher.name%> // <%=@daily.name%>
       <p><%=@daily.content%></p>
     </div>
