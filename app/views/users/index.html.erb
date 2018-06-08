@@ -3,7 +3,7 @@
   <hr class="w3-border-grey" style="margin:auto;width:40%">
 </div>
 
-  <%if !current_user.teachers.empty?%>
+  <%if !current_user.teachings.empty?%>
     <div class="w3-display-middle">
       <!-- <%@daily = current_user.teachings.sample%> -->
       <%=@daily.teacher.name%> // <%=@daily.name%>
