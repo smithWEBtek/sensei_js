@@ -4,8 +4,7 @@ class TeachingsController < ApplicationController
 
   def index
     if params[:teacher_id]
-      @teacher = current_user.teachers.find_by(params[:teacher_id])
-      binding.pry
+      @teacher = current_user.teachers.find_by(:id => params[:teacher_id])
       @teachings = @teacher.teachings
     else
       @teachings = current_user.teachings.all
