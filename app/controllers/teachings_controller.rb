@@ -3,7 +3,13 @@ class TeachingsController < ApplicationController
 
 
   def index
-    @teachings = current_user.teachings.all
+    if params[:teacher_id]
+      @teacher = current_user.teachers.find_by(params[:teacher_id])
+      binding.pry
+      @teachings = @teacher.teachings
+    else
+      @teachings = current_user.teachings.all
+    end
   end
 
   def show

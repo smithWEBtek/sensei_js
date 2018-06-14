@@ -3,6 +3,11 @@ Sensei::Application.routes.draw do
   resources :sessions, only: [:create, :destroy]
   root to: "application#index"
   resources :teachers, :teachings, :users
+
+  resources :teachers do
+    resources :teachings
+    end
+
   get '/most_common', :controller => 'teachers', :action => 'most_common'
   devise_scope :user do
     root to: "application#index"

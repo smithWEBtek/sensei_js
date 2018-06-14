@@ -18,8 +18,9 @@ class TeachersController < ApplicationController
   end
 
   def create
-    @teacher = Teacher.new(teacher_params)
-    @teacher.user = current_user
+    @teacher = current_user.teachers.build(teacher_params)
+    # @teacher = Teacher.new(teacher_params)
+    # @teacher.user = current_user
    if @teacher.save
      @teacher.save
      redirect_to teacher_path(@teacher), notice: 'Teacher was saved.'
@@ -45,7 +46,7 @@ class TeachersController < ApplicationController
   end
 
   def most_common
-    @most_common = current_user.teachers.sort_by {|teacher| teacher.teachings.count}.last.name
+    @most_common = User.most_common_teacher(current_user)
   end
 
 

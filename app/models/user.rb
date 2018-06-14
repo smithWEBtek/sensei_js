@@ -19,4 +19,8 @@ class User < ApplicationRecord
        user.password = Devise.friendly_token[0,20]
      end
    end
+
+   def self.most_common_teacher(user)
+     user.teachers.sort_by {|teacher| teacher.teachings.count}.last.name
+   end
 end
