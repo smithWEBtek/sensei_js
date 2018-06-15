@@ -1,0 +1,25 @@
+<div class="w3-display-left">
+  <h1 class="w3-xl"><b>&nbsp;&nbsp;&nbsp;&nbsp;links //</b></h1>
+  <hr class="w3-border-grey" style="margin:auto;width:40%">
+</div>
+
+  <%if !current_user.links.empty?%>
+    <div class="w3-display-middle">
+      <% current_user.links.each do |link| %>
+        <p>// <a href="/links/<%=link.id%>"><%=link.name.capitalize%></a></p>
+      <% end %>
+    </div>
+
+    <div class="w3-display-bottomleft">
+      <p>&nbsp;&nbsp;&nbsp;&nbsp;<%= link_to('Most Common Sensei',{:controller => 'teachers', :action => 'most_common'})%>
+        &nbsp;&nbsp;//&nbsp;&nbsp;<%= link_to('Your List of Links',{:controller => 'links', :action => 'index'})%>
+        &nbsp;&nbsp;//&nbsp;&nbsp;<%= link_to('Add a Link',{:controller => 'teachers', :action => 'most_common'})%></p>
+    </div>
+
+
+    <% else %>
+      <div class="w3-display-middle">
+        <h3><p>There are a million interesting things in our world. </p>
+          <p>It's time for you to go discover some <%= link_to('links','https://goo.gl/UgUaJW')%>.</p></h3>
+      </div>
+    <%end%>
