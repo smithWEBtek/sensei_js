@@ -1,5 +1,6 @@
 class User < ApplicationRecord
   has_many :teachers
+  has_many :links
   has_many :teachings, through: :teachers
   validates :email, presence: true
   validates :password, length: { in: 6..20 }

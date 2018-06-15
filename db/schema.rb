@@ -10,7 +10,14 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_06_04_191816) do
+ActiveRecord::Schema.define(version: 2018_06_15_214657) do
+
+  create_table "links", force: :cascade do |t|
+    t.string "name"
+    t.string "source"
+    t.string "description"
+    t.integer "user_id"
+  end
 
   create_table "teachers", force: :cascade do |t|
     t.string "name"
