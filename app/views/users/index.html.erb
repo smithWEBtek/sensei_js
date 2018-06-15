@@ -11,7 +11,9 @@
     </div>
 
     <div class="w3-display-bottomleft">
-      <p>&nbsp;&nbsp;&nbsp;&nbsp;<%= link_to('See Your Most Common Sensei',{:controller => 'teachers', :action => 'most_common'})%></p>
+      <p>&nbsp;&nbsp;&nbsp;&nbsp;<%= link_to('Most Common Sensei',{:controller => 'teachers', :action => 'most_common'})%>
+        &nbsp;&nbsp;&nbsp;&nbsp;<%= link_to('Your List of Links',{:controller => 'teachers', :action => 'most_common'})%>
+        &nbsp;&nbsp;&nbsp;&nbsp;<%= link_to('Add Links',{:controller => 'teachers', :action => 'most_common'})%></p>
     </div>
 
   <% else %>
