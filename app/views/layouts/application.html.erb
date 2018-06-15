@@ -37,7 +37,9 @@
       <%= link_to('Home',{:controller => 'application',:action => 'index'})%> |
       <%= link_to('Profile',{:controller => 'users',:action => 'index'})%> |
       <%= link_to('Teachers',{:controller => 'teachers',:action => 'index'})%> |
-      <%= link_to('Teachings',{:controller => 'teachings',:action => 'index'})%>
+      <%= link_to('Teachings',{:controller => 'teachings',:action => 'index'})%> |
+      <%= link_to('Links',{:controller => 'links',:action => 'index'})%>
+
     <% else %>
       <%= "You are not logged in. Make sure to log in." %>
     <% end %>

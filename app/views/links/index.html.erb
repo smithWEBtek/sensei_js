@@ -8,12 +8,7 @@
       <% current_user.links.each do |link| %>
         <p>// <a href="/links/<%=link.id%>"><%=link.name.capitalize%></a></p>
       <% end %>
-    </div>
-
-    <div class="w3-display-bottomleft">
-      <p>&nbsp;&nbsp;&nbsp;&nbsp;<%= link_to('Most Common Sensei',{:controller => 'teachers', :action => 'most_common'})%>
-        &nbsp;&nbsp;//&nbsp;&nbsp;<%= link_to('Your List of Links',{:controller => 'links', :action => 'index'})%>
-        &nbsp;&nbsp;//&nbsp;&nbsp;<%= link_to('Add a Link',{:controller => 'teachers', :action => 'most_common'})%></p>
+      <%= link_to('Create a new link.',{:controller => 'links',:action => 'new'})%>
     </div>
 
 
