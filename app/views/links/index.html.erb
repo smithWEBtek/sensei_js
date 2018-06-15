@@ -3,12 +3,23 @@
   <hr class="w3-border-grey" style="margin:auto;width:40%">
 </div>
 
+
   <%if !current_user.links.empty?%>
-    <div class="w3-display-middle">
+    <div class="w3-display-topmiddle">
+</br>
+</br>
+</br>
+      <h2>to read</h2>
       <% current_user.links.each do |link| %>
         <p>// <a href="/links/<%=link.id%>"><%=link.name.capitalize%></a></p>
       <% end %>
       <%= link_to('Create a new link.',{:controller => 'links',:action => 'new'})%>
+</br>
+</br>
+</br>
+</br>
+</br>
+    <h2>have read</h2>
     </div>
 
 
