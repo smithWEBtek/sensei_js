@@ -3,32 +3,35 @@
   <hr class="w3-border-grey" style="margin:auto;width:40%">
 </div>
 
-
+<div class="w3-display-topmiddle">
   <%if !current_user.links.empty?%>
-    <div class="w3-display-topmiddle">
-</br>
-</br>
-</br>
-    <h2>to read</h2>
-    <% current_user.links.each do |link| %>
-      <% if link.status == true %>
-        <p>// <a href="/links/<%=link.id%>"><%=link.name.capitalize%></a></p>
-      <%end%>
+    </br>
+    </br>
+    </br>
+    <h2><i>to read //</i></h2>
+      <% current_user.links.each do |link| %>
+        <% if link.status == true %>
+          <p>- <a href="/links/<%=link.id%>"><%=link.name.capitalize%></a></p>
+        <%end%>
+      <% end %>
+    </br>
+    </br>
+    </br>
+    </br>
+    </br>
+    <h2><i>have read //</i></h2>
+      <% current_user.links.each do |link| %>
+      <% if link.status == false %>
+        <p>- <a href="/links/<%=link.id%>"><%=link.name.capitalize%></a></p>
+      <% end %>
     <% end %>
+  </br>
+  </br>
+  </br>
+  </br>
+  </br>
     <%= link_to('Create a new link.',{:controller => 'links',:action => 'new'})%>
-</br>
-</br>
-</br>
-</br>
-</br>
-    <h2>have read</h2>
-    <% current_user.links.each do |link| %>
-    <% if link.status == false %>
-      <p>// <a href="/links/<%=link.id%>"><%=link.name.capitalize%></a></p>
-      <% end %>
-      <% end %>
-
-    </div>
+  </div>
 
 
     <% else %>
