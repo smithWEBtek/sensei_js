@@ -32,6 +32,7 @@ class LinksController < ApplicationController
     @link.update(name: params[:name])
     @link.update(source: params[:source])
     @link.update(description: params[:description])
+    @link.update(link_status: params[:link_status])
     redirect_to link_path(@link)
   end
 
@@ -45,6 +46,6 @@ class LinksController < ApplicationController
   private
 
   def link_params
-    params.require(:link).permit(:name, :source, :description)
+    params.require(:link).permit(:name, :source, :description, :status)
   end
 end

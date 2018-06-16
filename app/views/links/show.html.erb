@@ -6,10 +6,17 @@
   <div class="w3-display-middle">
     <p><b>Name:</b> <%=@link.name %></p>
     <p><b>Source:</b> <%=@link.source%></p>
-    <p><b>Description:</b> <%=@link.description%></p></br>
+    <p><b>Description:</b> <%=@link.description%></p>
+    <% if @link.status == true %>
+      <p><b>Status:</b> <%="To Read"%></p></br>
+    <% elsif @link.status == false %>
+      <p><b>Status:</b> <%="Have Read"%></p></br>
+    <% end %>
 
     <p>// <a href="/teachers/new"><%="Create a Teacher."%></a></p>
-    <p>// <a href="/teachings/new"><%="Create a Teaching."%></a></p>
+    <% if !current_user.teachers.empty?%>
+      <p>// <a href="/teachings/new"><%="Create a Teaching."%></a></p>
+    <% end %>
     <p>//<%= link_to('Edit this link.',{:controller => 'links',:action => 'edit'})%><p>
     <p>//<%= link_to('Delete this link.', link_path(@link), method: :delete, data: { confirm: 'Are you sure?' }) %></p>
   </div>

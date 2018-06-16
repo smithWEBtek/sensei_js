@@ -9,23 +9,33 @@
 </br>
 </br>
 </br>
-      <h2>to read</h2>
-      <% current_user.links.each do |link| %>
+    <h2>to read</h2>
+    <% current_user.links.each do |link| %>
+      <% if link.status == true %>
         <p>// <a href="/links/<%=link.id%>"><%=link.name.capitalize%></a></p>
-      <% end %>
-      <%= link_to('Create a new link.',{:controller => 'links',:action => 'new'})%>
+      <%end%>
+    <% end %>
+    <%= link_to('Create a new link.',{:controller => 'links',:action => 'new'})%>
 </br>
 </br>
 </br>
 </br>
 </br>
     <h2>have read</h2>
+    <% current_user.links.each do |link| %>
+    <% if link.status == false %>
+      <p>// <a href="/links/<%=link.id%>"><%=link.name.capitalize%></a></p>
+      <% end %>
+      <% end %>
+
     </div>
 
 
     <% else %>
       <div class="w3-display-middle">
-        <h3><p>There are a million interesting things in our world. </p>
-          <p>It's time for you to go discover some <%= link_to('links','https://goo.gl/UgUaJW')%>.</p></h3>
+        <p>If you have an interesting link to save, add it <%= link_to('here','/links/new')%>.</p>
+        </br>
+        <p>Otherwise, there are a million interesting things in our world. </p>
+        <p>It's time for you to go discover something <%= link_to('new','https://goo.gl/UgUaJW')%>.</p>
       </div>
     <%end%>

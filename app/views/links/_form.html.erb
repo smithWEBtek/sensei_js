@@ -7,7 +7,8 @@
   <%= form_for @link do |f| %>
   <p><%= f.text_field :name, placeholder: "Name"%></p>
   <p><%= f.url_field :source, size: "70x10", placeholder: "Source"%></p>
-  <p><%= f.text_area :description, size: "70x10", placeholder: "Description" %></p>
+  <p><%= f.text_area :description, size: "70x10", placeholder: "Description"%></p>
+  <p><%= f.select :status, [['To Read', true], ['Have Read', false]]%> &nbsp;&nbsp; &nbsp;&nbsp;
 
   <%= f.submit %>
   <% end %>
