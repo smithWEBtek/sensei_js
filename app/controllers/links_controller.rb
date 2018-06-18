@@ -32,7 +32,6 @@ class LinksController < ApplicationController
     @link.update(name: params[:name])
     @link.update(source: params[:source])
     @link.update(description: params[:description])
-    @link.update(link_status: params[:link_status])
     redirect_to link_path(@link)
   end
 
@@ -42,6 +41,17 @@ class LinksController < ApplicationController
     redirect_to root_path, notice: 'This link has been deleted.'
   end
 
+
+  def status_change
+    @link = current_user.links.find(params[:id])
+    if @link.status == true
+      @link.status = false
+    elsif @link.status == false
+      @link.status = true
+    end
+    @link.save
+    redirect_to link_path(@link), notice: 'This link has been updated.'
+  end
 
   private
 

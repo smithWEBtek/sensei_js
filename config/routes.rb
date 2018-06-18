@@ -13,4 +13,6 @@ Sensei::Application.routes.draw do
     root to: "application#index"
     post '/sessions/user', to: 'devise/sessions#create', via: :post
   end
+
+  get '/links/:id/status_change', :controller => 'links', :action => 'status_change'
 end
