@@ -33,10 +33,6 @@ Specs:
 - [x] Include nested resource show or index -
         - /teachers/1/teachings
 
-- [x] Include nested resource "new" form (URL e.g. recipes/1/ingredients)
-        - /teachers/new
-        - /teachings/new
-
 - [x] Include form display of validation errors (form URL e.g. /recipes/new)
 
 Confirm:
