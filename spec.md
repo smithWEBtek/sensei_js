@@ -66,9 +66,31 @@ General:
 - [] You don't include changes in a commit that aren't related to the commit message
 
 
-
+JSON/JQuery:
 - [] Must render at least one index page (index resource - 'list of things') via JavaScript and an Active Model Serialization JSON Backend.
 - [] Must render at least one show page (show resource - 'one specific thing') via JavaScript and an Active Model Serialization JSON Backend.
 - [] Your Rails application must dynamically render on the page at least one 'has-many' relationship through JSON using JavaScript.
 - [] Must use your Rails application and JavaScript to render a form for creating a resource that submits dynamically.
 - [] Must translate the JSON responses into JavaScript Model Objects using either ES6 class or constructor syntax. The Model Objects must have at least one method on the prototype. Formatters work really well for this.
+
+
+Project Specs:
+- [] Must have a Rails Backend and new requirements implemented through JavaScript.
+- [] Makes use of ES6 features as much as possible(e.g Arrow functions, Let & Const, Constructor Functions)
+- [] Must translate the JSON responses into Javascript Model Objects using either ES6 class or constructor syntax.
+- [] Must render at least one index page (index resource - 'list of things') via JavaScript and an Active Model Serialization JSON Backend.
+- [] Must render at least one show page (show resource - 'one specific thing') via JavaScript and an Active Model Serialization JSON Backend.
+- [] Your Rails application must reveal at least one 'has-many' relationship through JSON that is then rendered to the page.
+- [] Must use your Rails application and Javascript to render a form for creating a resource that submits dynamically.
+- [] At least one of the JS Model Objects must have a method on the prototype.
+
+
+Project Repo Specs:
+- [] Read Me file contains:
+- [] Application Description
+- [] Installation guide (e.g. fork and clone repo, migrate db, bundle install, etc)
+- [] Licensing statement
+- [] You have a large number of small Git commits
+- [] Your commit messages are meaningful
+- [] You made the changes in a commit that relate to the commit message
+- [] You don't include changes in a commit that aren't related to the commit message
