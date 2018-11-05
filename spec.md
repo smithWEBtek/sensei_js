@@ -86,7 +86,6 @@ Project Specs:
 
 
 Project Repo Specs:
-- [] Read Me file contains:
 - [] Application Description
 - [] Installation guide (e.g. fork and clone repo, migrate db, bundle install, etc)
 - [] Licensing statement
