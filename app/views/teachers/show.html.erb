@@ -5,6 +5,7 @@
 
 <div class="w3-display-middle">
   <p><b>Teacher: </b><%=@teacher.name.capitalize %></p>
+  <p><b>This teacher has taught you: </b><%=@teacher.teachings.count %> teaching(s) so far.</p>
   <p>//<%= link_to "Display the teacher's teachings.", teacher_teachings_path(@teacher) %></p>
 
 </br>
