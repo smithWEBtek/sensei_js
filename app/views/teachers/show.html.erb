@@ -6,6 +6,12 @@
 <div class="w3-display-middle">
   <p><b>Teacher: </b><%=@teacher.name.capitalize %></p>
   <p>//<%= link_to "Display the teacher's teachings.", teacher_teachings_path(@teacher) %></p>
+
+</br>
+</br>
+</br>
+
+  <p>//<%= link_to('See all teachers.',{:controller => 'teachers',:action => 'index'})%><p>
   <p>//<%= link_to('Create a new teacher.',{:controller => 'teachers',:action => 'new'})%><p>
   <p>//<%= link_to('Create a new teaching.',{:controller => 'teachings',:action => 'new'})%><p>
   <p>//<%= link_to('Edit this teacher.',{:controller => 'teachers',:action => 'edit'})%><p>
