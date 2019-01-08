@@ -6,7 +6,7 @@ Devise.setup do |config|
   config.omniauth :google_oauth2, ENV['GOOGLE_CLIENT_ID'], ENV['GOOGLE_CLIENT_SECRET'], {}
   require "omniauth-google-oauth2"
 
-
+	config.secret_key = '19f9d7902f2617ed9dbe3ee152edf47de7e62a6ed94a20ff2c6017930cf308c95068bf05e0d41fa9a94e645f2817f88435f16dddbfe12475adb4c29aaf47d187'
   # The secret key used by Devise. Devise uses this key to generate
   # random tokens. Changing this key will render invalid all existing
   # confirmation, reset password and unlock tokens in the database.
