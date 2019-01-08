@@ -1,11 +1,20 @@
 class TeachersController < ApplicationController
   before_action :authenticate_user!
 
-  def index
+	def index
+		@teachers = Teacher.all
+		respond_to do |format|
+			format.html {render :index}
+			format.json {render json: @teachers}
+		end
   end
 
   def show
-    @teacher = current_user.teachers.find(params[:id])
+		@teacher = current_user.teachers.find(params[:id])
+		respond_to do |format|
+			format.html {render :show}
+			format.json {render json: @teacher}
+		end
   end
 
   def new
